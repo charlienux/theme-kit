@@ -11,7 +11,7 @@ function buildCss() {
     return gulp.src(['scss/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('css/'))
         .pipe(cleanCss())
